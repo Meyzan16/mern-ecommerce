@@ -9,7 +9,7 @@ import categoryRoutes from './routes/category.js';
 import productRoutes from './routes/products.js'
 
 import cors from 'cors';
-import path from 'path';
+// import path from 'path';
 
 
 //configure env
@@ -25,7 +25,7 @@ const app = express();
 app.use(cors())
 app.use(express.json());
 app.use(morgan('dev'));
-app.use(express.static(path.join(__dirname,'./client/build')))
+// app.use(express.static(path.join(__dirname,'./client/build')))
 
 // routes
 app.use('/api/v1/auth', authRoutes);
@@ -37,12 +37,12 @@ app.use('/api/v1/category', categoryRoutes);
 app.use('/api/v1/product', productRoutes);
 
 // rest api
-// app.get('/', (req,res) => {
-//     res.send("<h1> Wellcome to ecommerce mern stack app </h1>");
-// })
-app.use('*', function(req,res){
-    res.sendFile(path.join(__dirname,'./client/build/index.html'));
-});
+app.get('/', (req,res) => {
+    res.send("<h1> Wellcome to ecommerce mern stack app </h1>");
+})
+// app.use('*', function(req,res){
+//     res.sendFile(path.join(__dirname,'./client/build/index.html'));
+// });
 
 //PORT
 const PORT = process.env.PORT || 8080;
