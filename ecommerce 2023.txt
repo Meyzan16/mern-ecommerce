@@ -1,0 +1,34 @@
+ecommerce 2023
+
+server
+1. npm init -y
+2. npm i express colors bcrypt
+3. npm i nodemon
+4. npm run server
+4. npm i dotenv
+5. npm i mongoose
+6. npm i morgan fungsi moragan Morgan adalah sebuah HTTP request logger middleware untuk NodeJS, 
+    yang berfungsi sebagai pencatatan setiap request ke server.
+7. npm i jsonwebtoken
+8. npm i concurrently cors
+9. npm i slugify
+10. npm i express-formidable // untuk form input poto
+
+
+client
+1.npm i react-router-dom
+2. npm i react-helmet "berfungsi untuk title judul page"
+3. npm i axios
+4. npm i react-toastify berfungsi untuk "pop up message error and succes"
+5. npm i react-hot-host
+6. ant design for modal
+
+how to connect backend and frontend
+1. npm i concurrently cors 
+2. create code client "client":  "npm start --prefix ./client",
+3. create code keduanya (server dan backend) "dev": "concurrently \"npm run server\" \"npm run client\""
+4. use.cors di server.js
+5. tambahkan proxy di package.json folder clinet "proxy":"http://localhost:8080", berfungsi memangil api backend
+
+"client": "npm start --prefix ./client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""

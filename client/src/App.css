@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,700&family=Poppins:wght@300&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Urbanist:wght@800&display=swap');
+
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Urbanist', sans-serif;
+}
+
+
+.container {
+  @apply max-w-[1320px] p-3 mx-auto;
+
+}
+
+input[type="text"],input[type="password"], input[type="email"], input[type="number"],
+input[type="tel"],textarea {
+    @apply  w-full border-2 px-2 py-1.5 text-gray-900 
+    shadow-sm ring-inset ring-primary placeholder:text-gray-400
+    sm:text-sm sm:leading-6 rounded-2xl border-primary
+      focus:outline-none focus:border-primary focus:ring-primary focus:ring-1;
+}
+
+
+textarea{
+  height:140px;
+}
+
+
+.form-select {
+  @apply block w-full border-2 px-2 py-1.5 text-gray-900 
+  shadow-sm ring-inset ring-primary placeholder:text-gray-400
+  sm:text-sm sm:leading-6 rounded-2xl border-primary
+    focus:outline-none focus:border-primary focus:ring-primary focus:ring-1;
+}
+
+.btn-submit{
+  @apply  rounded-3xl border   border-solid bg-primary text-white
+  hover:border-primary px-6 py-1.5 text-sm font-semibold leading-6 
+ hover:bg-primary focus:outline-none  focus:ring-primary focus:ring-1 mr-2;
+}
+
+.btn-edit{
+  @apply  rounded-3xl border   border-solid bg-yellow-500 text-white
+   hover:border-yellow-500 px-6 py-1.5 text-sm font-semibold leading-6 
+  hover:bg-yellow-500 focus:outline-none  focus:ring-yellow-500 focus:ring-1 mr-2;
+}
+
+.btn-delete{
+  @apply  rounded-3xl border   border-solid bg-red-500 text-white
+  hover:text-white hover:border-red-500 px-6 py-1.5 text-sm font-semibold leading-6 
+  hover:bg-red-500 focus:outline-none  focus:ring-red-500 focus:ring-1 mr-2;
+}
+
+.dropdown {
+  @apply  divide-y divide-gray-100 absolute right-0 top-14  w-full p-4 border border-gray-50 rounded-lg bg-gray-50 min-w-[210px] 
+  flex flex-col gap-2 justify-end items-end;
+}
+
+.dropdown_link {
+  @apply text-base  text-gray-700 hover:text-primary font-medium;
+}
+
+
+table.basic {
+  @apply w-full text-sm text-left text-gray-500 dark:text-gray-400 ;
+}
+
+table.basic  thead {
+  @apply bg-primary text-white text-xs  uppercase;
+}
+
+
+table.basic thead tr th {
+  @apply px-6 py-3 text-base;
+}
+
+table.basic tbody tr {
+  @apply bg-white border-b text-base  hover:bg-gray-50 ;
+}
+
+table.basic tbody tr td {
+  @apply px-6 py-4  ;
+}
+
+
+
+/* body{
+  font-family: 'Poppins', sans-serif;
+} */
+
+/* .navbar {
+  font-family: 'Poppins', sans-serif;
+  font-size: 17px;
+  line-height: 26px;
+  text-transform: uppercase;
+} */
+/* font-family: 'Playfair Display', serif; */
+/* font-family: 'Poppins', sans-serif; */
