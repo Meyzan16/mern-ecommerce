@@ -26,7 +26,7 @@ import EditProducts from './pages/Admin/Products/Edit';
 import Products from './pages/Admin/Products/Index';
 import AllUsers from './pages/Admin/AllUsers';
 import ProductDetail from './pages/ProductDetail';
-import CategoryDetail from './pages/CategoryDetail';
+import CategoryProducts from './pages/CategoryProducts';
 
 function App() {
   return (
@@ -34,12 +34,11 @@ function App() {
      <Routes>
         <Route path='/' element={<Homepage />} />
         <Route path='/product/:slug' element={<ProductDetail />} />
-        <Route path='/category/:slug' element={<CategoryDetail />} />
+        <Route path='/category/:slug' element={<CategoryProducts />} />
         <Route path='/about' element={<About />} />
         <Route path='/contact' element={<Contact />} />
         <Route path='/privacy-policy' element={<Policy />} />
         <Route path='*' element={<Pagenotfound />} />
-
 
         {/* user */}
         <Route path='/dashboard' element={<PrivateRoute />}>

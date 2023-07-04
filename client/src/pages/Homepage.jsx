@@ -219,20 +219,20 @@ const Homepage = () => {
                     <nav className='mt-8'>
                       <ul className="inline-flex -space-x-px">
                         <li>
-                          <div  className="px-3 py-2 ml-0 leading-tight text-gray-500 bg-white border border-gray-300 rounded-l-lg" onClick={prePage}>Previous</div>
+                          <div  className="cursor-pointer px-3 py-2 ml-0 leading-tight text-gray-500 bg-white border border-gray-300 rounded-l-lg" onClick={prePage}>Previous</div>
                         </li>
                         
                         {
                           numbers.map((n,i) => (
                             <li key={i}>
-                              <div  className={`px-3 py-2 border text-gray-500 border-gray-300  ${currentPage === n ? 'bg-blue-600 text-white' : ''} `}
+                              <div  className={`cursor-pointer px-3 py-2 border text-gray-500 border-gray-300  ${currentPage === n ? 'bg-blue-600 text-white' : ''} `}
                               onClick={() => changeCPage(n)}> {n} </div>
                             </li>
                           ))
                         }
                       
                         <li>
-                          <div  className="px-3 py-2 leading-tight text-gray-500 bg-white border border-gray-300 rounded-r-lg" onClick={nextPage} >
+                          <div  className="cursor-pointer px-3 py-2 leading-tight text-gray-500 bg-white border border-gray-300 rounded-r-lg" onClick={nextPage} >
                             Next
                           </div>
                         </li>
