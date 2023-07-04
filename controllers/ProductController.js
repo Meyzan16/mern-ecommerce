@@ -107,8 +107,8 @@ export const singleProductController = async (req,res) => {
 // get photo
 export const productPhotoController = async (req,res) => {
     try {
-        // const {pid} = req.params;
-        const product = await productModel.findById(req.params.pid).select("photo");
+        const {pid} = req.params;
+        const product = await productModel.findOne({_id:pid}).select("photo");
         if(product.photo.data){
             res.set('Content-type', product.photo.contentType)
             res.status(200).send(product.photo.data);

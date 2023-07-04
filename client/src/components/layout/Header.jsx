@@ -59,14 +59,14 @@ const handleLogout = () => {
                                     <NavLink to='/'  className={homeClass} >Home</NavLink>
                                   </li>
 
-                                  <li>
-                                     <div className="relative inline-block text-left">
-                                      <div 
+                                  <li className='flex relative'>
+                                     <div className="inline-block text-left">
+                                      <NavLink 
                                         className="inline-flex justify-center w-full rounded-md" 
-                                        onClick={() => setIsOpen(!isOpen)}
-                                      >
+                                        onClick={() => setIsOpen(!isOpen)} >
                                         Category
-                                      </div>
+                                      </NavLink>
+
                                       {isOpen &&  ( 
                                         <div className="absolute w-56 rounded-md shadow-lg bg-white ">
                                           <div >
