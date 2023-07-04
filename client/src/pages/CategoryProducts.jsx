@@ -33,8 +33,7 @@ const CategoryProducts = () => {
       
   return (
     <Layout>
-        <div className='bg-white flex-grow  rounded-lg 
-            leading-relaxed text-xl font-bold mb-8'>
+        <div className='mb-8'>
 
             <h1 className='text-2xl text-primary mb-4'>Category {category?.name} </h1>
                     {

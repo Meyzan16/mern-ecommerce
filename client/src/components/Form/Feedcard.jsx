@@ -1,9 +1,12 @@
 
 import React from 'react'
 import { useNavigate,useLocation,Link} from 'react-router-dom';
+import { useCart } from '../../context/Cart';
+import toast from 'react-hot-toast';
 
 const Feedcard = ({product,index}) => {
   const navigate = useNavigate();
+  const[cart,setCart] = useCart();
   
   const {pathname} = useLocation()
   // let subpage = pathname.split('/')?.[1];
@@ -41,10 +44,15 @@ const Feedcard = ({product,index}) => {
                       </button>
 
 
-                      <button className='cursor-pointer flex items-center text-base
+                      <button onClick={() => {
+                        setCart([...cart, product])
+                        localStorage.setItem('cart', JSON.stringify([...cart, product]))
+                        toast.success('Item added successfully');
+
+                        }} className='cursor-pointer flex items-center text-base
                         gap-2 absolute bottom-2 right-2 py-2 px-4 bg-slate-100 hover:bg-primary hover:text-white
                         rounded-2xl shadow-md shadow-gray-500'>
-                        Add To Buy
+                        Add To Cart
                       </button>
                                                         
                     </>

@@ -27,6 +27,7 @@ import Products from './pages/Admin/Products/Index';
 import AllUsers from './pages/Admin/AllUsers';
 import ProductDetail from './pages/ProductDetail';
 import CategoryProducts from './pages/CategoryProducts';
+import Cart from './pages/Cart';
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
         <Route path='/' element={<Homepage />} />
         <Route path='/product/:slug' element={<ProductDetail />} />
         <Route path='/category/:slug' element={<CategoryProducts />} />
+        <Route path='/cart' element={<Cart />} />
         <Route path='/about' element={<About />} />
         <Route path='/contact' element={<Contact />} />
         <Route path='/privacy-policy' element={<Policy />} />

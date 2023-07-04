@@ -6,9 +6,13 @@ import toast from 'react-hot-toast';
 import { useState } from "react";
 import useCategory from '../../hooks/useCategory';
 
+import {useCart} from '../../context/Cart';
+
 const Header = () => {
   const [auth,setAuth] = useAuth();
+  const [cart,setCart] = useCart();
   const categories = useCategory();
+
   const [isOpen, setIsOpen] = useState(false)
 
  // cek pathname
@@ -26,7 +30,7 @@ const homeClass = page === "/" ? clasess : "hover:text-primary";
 const register = page === "/register" ? clasess : "hover:text-primary";
 const login = page === "/login" ? clasess : "hover:text-primary";
 const logout = page === "/logout" ? clasess : "text-base text-gray-700  hover:text-primary";
-const cart = page === "/cart" ? clasess : "hover:text-primary";
+const cartClass = page === "/cart" ? clasess : "hover:text-primary flex justify-center items-center";
 
 const dropdown = page === "/dashboard/admin"  ? "absolute right-0 top-14 flex flex-col text-right justify-end  py-4 px-2 border border-gray-50 rounded-xl bg-gray-50 min-w-[210px] gap-2" : "dropdown";
 
@@ -87,7 +91,21 @@ const handleLogout = () => {
                                     </div>
                                   </li>
 
-                                  <li><NavLink to='/cart'  className={cart}  >Cart</NavLink></li>  
+                                  <li>  
+                                    <div className="relative py-2">
+                                      <NavLink to='/cart'  className={cartClass} > 
+                                        <div className=" absolute left-5 top-6">
+                                          <p className="flex h-2 w-2 items-center justify-center rounded-full bg-red-500 p-3 text-xs text-white ">
+                                            {cart?.length}
+                                          </p>
+                                        </div>
+                                        Cart
+                                      </NavLink>
+
+                                    </div>  
+
+                                 
+                                  </li>  
                                   
                                   {
                                     auth.user ? ( <>
