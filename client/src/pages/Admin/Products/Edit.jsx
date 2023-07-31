@@ -22,7 +22,6 @@ const Edit = () => {
     const [id,setid] = useState("");
    
     //get single product 
-    
     const getSingleProduct = async () => {
         try {
             const {data} = await axios.get(`/api/v1/product/get-product/${slug}`)
@@ -39,6 +38,7 @@ const Edit = () => {
             toast.error('Something went wrong in get single product')
         }
     }
+
     useEffect(()=>{
         getSingleProduct();
         //eslint disable next line

@@ -53,7 +53,7 @@ const Cart = () => {
 
             <div className='text-center text-lg text-primary'>
               {
-                  cart?.length ? `You have ${cart?.length} items in your cart 
+                  cart?.length > 0 ? `You have ${cart?.length} items in your cart 
                   ${
                   auth?.token ? "" : "please login to checkout"    
                   }` :

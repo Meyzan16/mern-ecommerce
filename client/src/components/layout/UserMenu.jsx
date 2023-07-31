@@ -24,11 +24,8 @@ const UserMenu = () => {
     }
     return clasess;
   }
-
-
   return (            
             <nav className="flex flex-wrap  gap-3 ">
-             
                 <NavLink to='/dashboard/user'  className={linkClasses('user')}>
                   <HiHome  className='text-xl'/>
                   Dashboard

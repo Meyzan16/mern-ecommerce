@@ -166,6 +166,7 @@ export const forgetpassController = async (req,res) => {
         const user = await userModel.findOne({email})
         if(user){   
             const hashed = await hashPassword(newPassword);
+            
             await userModel.findByIdAndUpdate(user._id,{
                 password:hashed
             });

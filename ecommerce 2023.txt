@@ -31,4 +31,4 @@ how to connect backend and frontend
 5. tambahkan proxy di package.json folder clinet "proxy":"http://localhost:8080", berfungsi memangil api backend
 
 "client": "npm start --prefix ./client",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
+"dev": "concurrently \"npm run server\" \"npm run client\""

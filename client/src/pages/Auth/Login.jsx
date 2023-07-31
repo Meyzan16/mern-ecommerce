@@ -21,16 +21,16 @@ const Login = () => {
               email,password
             });
             if(res && res.data.success){
-                toast.success(res.data && res.data.message);
+                
                 setAuth({
                     ...auth,
                     user:res.data.user,
                     token:res.data.token,
                 });
-
                 //save di local strogae
                 localStorage.setItem('auth', JSON.stringify(res.data));
-                navigate( '/');
+                navigate('/');
+                toast.success(res.data && res.data.message);
             }else{
                 toast.error(res.data.message);
             }

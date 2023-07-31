@@ -34,6 +34,7 @@ const New = () => {
     }
   }
 
+
   //pagination 
   const [currentPage, setCurrentPage] = useState(1);
   const recordsPerPage = 2;
@@ -121,20 +122,19 @@ const New = () => {
         <AdminMenu />
 
         <div className='bg-gray-100 flex-grow  rounded-lg px-4 py-6
-        leading-relaxed text-xl font-bold border-l-4
-        border-solid border-teal-500 shadow-lg mt-6'>
+          leading-relaxed text-xl font-bold border-l-4
+          border-solid border-teal-500 shadow-lg mt-6'>
           <h1 className='text-2xl text-primary'>Category</h1>
 
           <div className='mt-6 text-base font-normal'>
             
-          <div className='md:flex  items-center gap-2 w-full justify-between pb-4 '>
-              <CategoryForm handleSubmit={handleSubmit} value={name} setValue={setName}/>
-            
-              <div className="w-full md:max-w-sm">
-                <input type="text" placeholder="Search for items" />
-              </div>
-      
-          </div>
+            <div className='md:flex  items-center gap-2 w-full justify-between pb-4 '>
+                <CategoryForm handleSubmit={handleSubmit} value={name} setValue={setName}/>
+              
+                <div className="w-full md:max-w-sm">
+                  <input type="text" placeholder="Search for items" />
+                </div>
+            </div>
 
             <div className=" overflow-x-auto shadow-md sm:rounded-lg">
               <table className="basic">
